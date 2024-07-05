@@ -29,7 +29,7 @@ export const logo = <img src={`${LOGO_URL}`} alt="Logo" className="h-[75px] w-[7
 export const APP_NAME = 'Adopted By a Murderous Duke Family';
 export const NavbarName = "Adopted By MD Family";
 
-export const APP_DESCRIPTION = `Read ${MANGA_NAME} manga online at ${DOMAIN}. Agnes finds herself back in time after being exploited for her healing powers by a cruel duke. This time, she's offered adoption by Duke Rodwick, the head of a notorious family of assassins. Despite their dark reputation, Agnes accepts, hoping for a better life. However, her new family's work and her secret power put her in a precarious situation.`;
+export const APP_DESCRIPTION = `Read ${MANGA_NAME} manhwa or manga all chapters online. Agnes finds herself back in time after being exploited for her healing powers by a cruel duke. This time, she's offered adoption by Duke Rodwick, the head of a notorious family of assassins. Despite their dark reputation, Agnes accepts, hoping for a better life. However, her new family's work and her secret power put her in a precarious situation.`;
 
 export const DISQUS_SHORTNAME = "my-cms-7";
 

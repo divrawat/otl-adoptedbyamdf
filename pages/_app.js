@@ -11,10 +11,12 @@ NProgress.configure({ showSpinner: false })
 const shantellSans = Shantell_Sans({ subsets: ['latin'], preload: false });
 
 function MyApp({ Component, pageProps }) {
+  /*
   useEffect(() => {
     const disableRightClick = (event) => { event.preventDefault(); };
     document.addEventListener('contextmenu', disableRightClick);
   }, []);
+  */
   return (
     <>
       <style jsx global>{`

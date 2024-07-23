@@ -27,7 +27,7 @@ export const BEHIND_COVER_IMG = "https://i0.wp.com/thesportsgrail.com/wp-content
 export const logo = <img src={`${LOGO_URL}`} alt="Logo" className="h-[75px] w-[75px] rounded-full mr-5 md:ml-0 ml-4 md:pb-2 md:my-0 my-1" />
 
 export const APP_NAME = 'Adopted By a Murderous Duke Family';
-export const NavbarName = "Adopted By MD Family";
+export const NavbarName = "Train Speed Test";
 
 export const APP_DESCRIPTION = `Read ${MANGA_NAME} manhwa or manga all chapters online. Agnes finds herself back in time after being exploited for her healing powers by a cruel duke. This time, she's offered adoption by Duke Rodwick, the head of a notorious family of assassins. Despite their dark reputation, Agnes accepts, hoping for a better life. However, her new family's work and her secret power put her in a precarious situation.`;
 

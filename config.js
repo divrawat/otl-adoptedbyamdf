@@ -1,8 +1,8 @@
 
-export const DOMAIN = 'http://localhost:3000';
+// export const DOMAIN = 'http://localhost:3000';
 
 export const IMAGES_DOMAIN = 'https://www.operationtruelove.in.net';
-// export const DOMAIN = 'https://operationtruelove.adoptedbyamurderousdukefamily.in.net';
+export const DOMAIN = 'https://operationtruelove.adoptedbyamurderousdukefamily.in.net';
 
 
 export const MANGA_DESCRIPTION = `<a href="${DOMAIN}"><u>Operation True Love</u></a> is a webtoon that revolves around a high school student named Seojin who devises a plan to win the heart of her crush, Sunjin. With the help of her friends, Seojin navigates through various comedic and heartfelt situations as she tries to execute her romantic strategy. The story explores themes of friendship, love, and self-discovery amidst the challenges of adolescence.`;

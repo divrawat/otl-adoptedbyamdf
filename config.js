@@ -1,7 +1,7 @@
 
 // export const DOMAIN = 'http://localhost:3000';
 
-export const IMAGES_DOMAIN = 'https://www.operationtruelove.in.net';
+export const IMAGES_DOMAIN = 'https://images.onepiecemanga.in.net';
 export const DOMAIN = 'https://operationtruelove.adoptedbyamurderousdukefamily.in.net';
 
 
@@ -16,7 +16,7 @@ export const MANGA_STUDIO = 'None';
 export const MANGA_GENRE = 'Drama, Romance, Comedy';
 
 export const CHAPTER_PREFIX = 'operation-true-love-chapter';
-export const IMAGE_PREFIX = 'images/operation-true-love';
+export const IMAGE_PREFIX = 'operation-true-love';
 export const NEXT_PREVIOUS_PREFIX = 'manga/operation-true-love-chapter';
 export const URL_PREFIX = 'manga/operation-true-love-chapter';
 

@@ -74,10 +74,10 @@ export default function Home() {
 
   const filteredMangaLinks = RelatedMangaLinks.filter(item => item.link !== DOMAIN);
 
-
   const handleRedirect = () => {
     window.open('https://thampolsi.com/4/7457654', '_blank');
   };
+
 
   return (
     <>
@@ -86,10 +86,10 @@ export default function Home() {
       <article>
 
         <div className="md:flex md:mb-[60px] mb-5 pt-3 relative bg-[black]">
-          <div className="absolute inset-0 bg-cover bg-no-repeat bg-center" style={{ backgroundImage: `url(${BEHIND_COVER_IMG})`, opacity: '0.20' }}></div>
+          <div className="absolute inset-0 bg-cover bg-no-repeat bg-center" style={{ backgroundImage: `url(${BEHIND_COVER_IMG})`, opacity: '0.25' }}></div>
 
           <div className="pt-3 md:w-2/5">
-            <img className="mx-auto md:mx-0" width={400} height={400} src={`${COVER_IMG}`} alt="Manga Cover" />
+            <img className="mx-auto md:mx-0" width={450} height={450} src={`${COVER_IMG}`} alt="Manga Cover" />
           </div>
 
           <div className="md:w-3/5 md:mr-10  text-white p-5 relative z-10">
@@ -165,7 +165,7 @@ export default function Home() {
 
 
 
-        {/* <div className="max-w-[1250px] mx-auto p-4">
+        <div className="max-w-[1250px] mx-auto p-4">
           <h1 className="text-3xl font-bold mb-6 text-center">Read More Mahwas</h1>
           <div className="flex flex-wrap gap-12 justify-center">
             {filteredMangaLinks.map((item, index) => (
@@ -179,8 +179,7 @@ export default function Home() {
               </div>
             ))}
           </div>
-        </div> */}
-
+        </div>
 
 
 

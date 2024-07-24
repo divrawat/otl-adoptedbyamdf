@@ -2,7 +2,7 @@ import Link from 'next/link';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import Head from 'next/head';
-import { APP_NAME, DOMAIN, MANGA_NAME, NEXT_PREVIOUS_PREFIX, IMAGE_PREFIX, CHAPTER_PREFIX, AUTHOR_PAGE, LOGO_URL, chaptersData } from '@/config';
+import { APP_NAME, DOMAIN, IMAGES_DOMAIN, MANGA_NAME, NEXT_PREVIOUS_PREFIX, IMAGE_PREFIX, CHAPTER_PREFIX, AUTHOR_PAGE, LOGO_URL, chaptersData } from '@/config';
 import DisqusComments from '@/components/DisQus';
 export const runtime = 'experimental-edge';
 
@@ -27,7 +27,7 @@ export default function Chapter({ chapterNumber, imageUrls, totalChapters, param
     const nextChapter = chapterIndex < totalChapters - 1 ? chaptersData[chapterIndex + 1].chapterNumber : null;
 
 
-    const DESCRIPTION = `Read ${MANGA_NAME} chapter ${chapterNumber} online. Agnes finds herself back in time after being exploited for her healing powers by a cruel duke. This time, she's offered adoption by Duke Rodwick, the head of a notorious family of assassins. Despite their dark reputation, Agnes accepts, hoping for a better life. However, her new family's work and her secret power put her in a precarious situation.`
+    const DESCRIPTION = `Read ${MANGA_NAME} chapter ${chapterNumber} online. Seojin who devises a plan to win the heart of her crush, Sunjin. With the help of her friends, Seojin navigates through various comedic and heartfelt situations as she tries to execute her romantic strategy.`
     const URL = params.chapter;
 
 
@@ -94,7 +94,7 @@ export default function Chapter({ chapterNumber, imageUrls, totalChapters, param
                     <div className="flex justify-between max-w-[800px] mx-auto md:mb-[50px] mt-5">
                         {previousChapter !== null ? (
                             <Link
-                                // onClick={handleRedirect} 
+                                // onClick={handleRedirect}
                                 href={`${DOMAIN}/${NEXT_PREVIOUS_PREFIX}-${previousChapter}`}>
                                 <button className="text-[white] text-[13px] hover:scale-105 active:scale-95 transition-transform rounded bg-[black] px-2 py-2 font-semibold">Previous Chapter</button>
                             </Link>
@@ -104,7 +104,7 @@ export default function Chapter({ chapterNumber, imageUrls, totalChapters, param
 
                         {nextChapter !== null ? (
                             <Link
-                                // onClick={handleRedirect}
+                                // onClick={handleRedirect} 
                                 href={`${DOMAIN}/${NEXT_PREVIOUS_PREFIX}-${nextChapter}`}>
                                 <button className="text-[white] text-[13px] hover:scale-105 active:scale-95 transition-transform rounded bg-[black] px-2 py-2 font-semibold">Next Chapter</button>
                             </Link>
@@ -164,7 +164,7 @@ export async function getStaticProps({ params }) {
 
 const getImageUrls = (chapterNumber, numImages) => {
     const imageUrls = [];
-    const chapterImagesFolder = `${DOMAIN}/${IMAGE_PREFIX}/chapter-${chapterNumber}`;
+    const chapterImagesFolder = `${IMAGES_DOMAIN}/${IMAGE_PREFIX}/chapter-${chapterNumber}`;
     for (let i = 1; i <= numImages; i++) {
         const imageUrl = `${chapterImagesFolder}/${i}.webp`;
         imageUrls.push(imageUrl);

@@ -21,7 +21,7 @@ export default function Navbar() {
                 <div className="flex items-center md:space-x-4 justify-between">
                     <div className="flex items-center">
                         <Link href={DOMAIN}> {logo}</Link>
-                        <span className=" text-lg font-bold tracking-wider text-[19px]  md:text-[22px]"><Link href="/">{NavbarName}</Link></span>
+                        {/* <span className=" text-lg font-bold tracking-wider text-[19px]  md:text-[22px]"><Link href="/">{NavbarName}</Link></span> */}
 
                     </div>
                     <div className="flex gap-5 items-center">

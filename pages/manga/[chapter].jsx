@@ -5,6 +5,7 @@ import Head from 'next/head';
 import { APP_NAME, DOMAIN, IMAGES_DOMAIN, MANGA_NAME, NEXT_PREVIOUS_PREFIX, IMAGE_PREFIX, CHAPTER_PREFIX, AUTHOR_PAGE, LOGO_URL, chaptersData } from '@/config';
 import DisqusComments from '@/components/DisQus';
 export const runtime = 'experimental-edge';
+const AdSense = dynamic(() => import('@/components/Adsense'), { ssr: false });
 
 export default function Chapter({ chapterNumber, imageUrls, totalChapters, params, errorcode }) {
 
@@ -115,20 +116,58 @@ export default function Chapter({ chapterNumber, imageUrls, totalChapters, param
                     </div>
                 </div>
 
-                <div className='max-w-[1200px] mx-auto mb-5'>
+                {/* <div className='max-w-[1200px] mx-auto mb-5'>
                     {imageUrls.map((imageUrl, index) => (
                         <div className='allimages' key={index}>
                             <img width={700} height={600} loading="lazy" src={imageUrl} alt={`Chapter ${chapterNumber} Image ${index + 1}`} />
                         </div>
                     ))}
+                </div> */}
+
+
+
+
+
+
+
+
+
+                <div className="max-w-[1200px] mx-auto mb-5">
+                    {imageUrls.map((imageUrl, index) => (
+                        <React.Fragment key={index}>
+                            <div className="allimages">
+                                <img
+                                    loading="lazy"
+                                    src={imageUrl}
+                                    alt={`Chapter ${chapterNumber} Image ${index + 1}`}
+                                />
+                            </div>
+                            {(index === 0 || index === 2 || index === 4) && (
+                                <div className='p-3'>
+                                    <AdSense key={`ad-${index}`} />
+                                </div>
+                            )}
+                        </React.Fragment>
+                    ))}
                 </div>
 
-                <div className='py-10 bg-[#0f0511]'>
+
+
+
+
+
+
+
+
+
+
+
+                {/* <div className='py-10 bg-[#0f0511]'>
                     <h2 className='text-4xl text-center text-[white] font-blod px-4 mb-10'>Comment Section</h2>
                     <section className='max-w-[1000px] mx-auto px-5'>
                         <DisqusComments url={`/manga/${URL}`} identifier={chapterNumber} title={`${MANGA_NAME} Chapter ${chapterNumber}`} />
                     </section>
-                </div>
+                </div> */}
             </article>
 
             <Footer />
